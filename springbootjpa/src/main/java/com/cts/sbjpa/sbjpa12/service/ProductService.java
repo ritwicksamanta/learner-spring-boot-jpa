@@ -42,5 +42,12 @@ public class ProductService {
         return pRepository.save(updateProduct);
     }
 
+    public List<Product> getProductsByName(String name){
+        return pRepository.findByName(name);
+    }
 
+
+    public List<Product> getProductsBetweenQuantities(int start, int end){
+        return pRepository.findByQuantityBetween(start,end);
+    }
 }
